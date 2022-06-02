@@ -35,7 +35,7 @@
 		@include("layouts.header")
 		<!--end header -->
 		<!--navigation-->
-		@include("layouts.nav")
+		<!-- @include("layouts.nav") -->
 		<!--end navigation-->
 		<!--start page wrapper -->
 		@yield("wrapper")
