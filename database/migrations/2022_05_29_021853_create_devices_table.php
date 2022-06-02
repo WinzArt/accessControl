@@ -17,7 +17,7 @@ class CreateDevicesTable extends Migration
             $table->id();
             $table->string('name');
             // $table->string('device');
-            $table->enum('device', ['Enrollment, Reader', 'MobileReader', 'Module', 'IntelligentController'])->nullable();
+            $table->enum('device', ['Enrollment', 'Reader', 'MobileReader', 'Module', 'IntelligentController'])->nullable();
             $table->timestamps();
         });
     }
