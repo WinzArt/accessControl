@@ -29,7 +29,7 @@
 					<table id="example2" class="table table-striped display nowrap">
 						<thead>
 							<tr>
-								<th scope="col">Id</th>
+								<th scope="col">No</th>
 								<th scope="col">Photo</th>
 								<th scope="col">Name</th>
 								<th scope="col">Access</th>
@@ -51,11 +51,11 @@
 								<th scope="row">{{ $no++ }}</th>
 								<td>
 									@if ($visitor->photo == null)
-									<img class="img-circle" src="{{ asset('visitorsPhoto/avatar.png') }}" alt="no photo" width="50px"
-										height="50px">
+									<img class="img-circle" src="{{ asset('assets/images/avatars/avatar-no-photo.png') }}"
+										alt="no photo" width="40px" height="40px">
 									@else
 									<img class="img-circle" src="{{ asset('visitorsPhoto/'. $visitor->photo) }}"
-										alt="{{ $visitor->photo }}" width="50px" height="50px">
+										alt="{{ $visitor->photo }}" width="40px" height="40px">
 									@endif
 								</td>
 								<td>{{ $visitor->name }}</td>
