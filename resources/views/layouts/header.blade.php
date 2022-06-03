@@ -338,8 +338,8 @@
 					data-bs-toggle="dropdown" aria-expanded="false">
 					<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
 					<div class="user-info ps-3">
-						<p class="user-name mb-0">Administrator</p>
-						<p class="designattion mb-0">Management</p>
+						<p class="user-name mb-0">Nadia</p>
+						<p class="designattion mb-0">Reseptionist</p>
 					</div>
 				</a>
 				<ul class="dropdown-menu dropdown-menu-end text-center">
@@ -348,20 +348,20 @@
 							<img src="assets/images/gallery/01.png" class="card-img-top" alt="...">
 							<div class="card-body" style="position: absolute;top:2rem;left:0;right:0;">
 								<h6 class="designattion mb-4">Operator</h6>
-								<img src="assets/images/avatars/avatar-2.png" class="rounded-circle" alt="user avatar"
+								<img src="assets/images/avatars/avatar-2.png" class="rounded-circle shadow-lg" alt="user avatar"
 									style="background-color: #495057; padding: 4px" width="150px">
 							</div>
 						</div>
 					</div>
 					<h5 class="user-name mb-0">Nadia</h5>
-					<p class="designattion mb-0">Resepsionist</p>
+					<p class="designattion mb-0">Reseptionist</p>
 					<li><a class="dropdown-item" href="{{ url('user-profile') }}"><i
 								class="bx bx-user"></i><span>Profile</span></a>
 					</li>
 					<li><a class="dropdown-item" href="{{ url('index') }}"><i
 								class='bx bx-home-circle'></i><span>Dashboard</span></a>
 					</li>
-					<li><a class="dropdown-item" href="{{ url('authentication-signin') }}"><i
+					<li><a class="dropdown-item" href="{{ url('authentication-signin-with-header-footer') }}"><i
 								class='bx bx-log-out-circle'></i><span>Logout</span></a>
 					</li>
 				</ul>
