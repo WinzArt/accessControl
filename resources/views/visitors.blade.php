@@ -51,8 +51,8 @@
 								<th scope="row">{{ $no++ }}</th>
 								<td>
 									@if ($visitor->photo == null)
-									<img class="img-circle" src="{{ asset('assets/images/avatars/avatar-no-photo.png') }}"
-										alt="no photo" width="40px" height="40px">
+									<img class="img-circle" src="{{ asset('assets/images/avatars/avatar-no-photo.png') }}" alt="no photo"
+										width="40px" height="40px">
 									@else
 									<img class="img-circle" src="{{ asset('visitorsPhoto/'. $visitor->photo) }}"
 										alt="{{ $visitor->photo }}" width="40px" height="40px">
@@ -80,7 +80,7 @@
 								<td>0{{ $visitor->phone }}</td>
 								<td>{{ $visitor->email }}</td>
 								<td>{{ $visitor->updated_at->format('d/m/Y') }}</td>
-								<td class="text-center">
+								<td>
 									<a class="btn badge btn-outline-warning edit" type="button" data-bs-toggle="modal"
 										data-bs-target="#modalEdit-{{ $visitor->id }}"><i class="bx bx-edit bx-xs"></i></a>
 									<form action="{{ route('visitors.destroy', $visitor) }}" class="d-inline" method="POST">

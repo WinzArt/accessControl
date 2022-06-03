@@ -12,7 +12,7 @@
 			<div class="mobile-toggle-menu">
 				<i class='bx bx-menu'></i>
 			</div>
-			<div class="top-menu-left d-none d-lg-block ps-3">
+			<div class="top-menu-left d-none d-xl-block ps-3">
 				<nav class="">
 					<ul class="navbar-nav nav-pills">
 						<li class="nav-item">
@@ -24,28 +24,20 @@
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}" href="{{ url('devices') }}">Devices</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}" href="{{ url('#') }}">History</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
-			{{-- <div class="search-bar flex-grow-1">
-				<div class="position-relative search-bar-box">
-					<input type="text" class="form-control search-control" placeholder="Type to search..."> <span
-						class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
-					<span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
-				</div>
-			</div> --}}
 			<div class="top-menu ms-auto">
 				<ul class="navbar-nav align-items-center">
-					{{-- <li class="nav-item mobile-search-icon">
-						<a class="nav-link" href="#"> <i class='bx bx-search'></i>
-						</a>
-					</li> --}}
-					<li class="nav-item dropdown dropdown-large">
+					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown"
 							aria-expanded="false"> <i class='bx bx-category'></i>
 						</a>
 						<div class="dropdown-menu dropdown-menu-end">
-							<div class="row row-cols-3 g-3 p-3">
+							<div class="row row-cols-2 g-3 p-3">
 								<div class="col text-center">
 									<div class="app-box mx-auto bg-gradient-cosmic text-white"><i class='bx bx-group'></i>
 									</div>
@@ -341,7 +333,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="user-box dropdown border-light-2">
+			<div class="user-box dropdown dropdown-large border-light-2">
 				<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button"
 					data-bs-toggle="dropdown" aria-expanded="false">
 					<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
@@ -350,23 +342,24 @@
 						<p class="designattion mb-0">Management</p>
 					</div>
 				</a>
-				<ul class="dropdown-menu dropdown-menu-end">
+				<ul class="dropdown-menu dropdown-menu-end text-center">
+					<div class="col pb-3">
+						<div class="card">
+							<img src="assets/images/gallery/01.png" class="card-img-top" alt="...">
+							<div class="card-body" style="position: absolute;top:2rem;left:0;right:0;">
+								<h6 class="designattion mb-4">Operator</h6>
+								<img src="assets/images/avatars/avatar-2.png" class="rounded-circle" alt="user avatar"
+									style="background-color: #495057; padding: 4px" width="150px">
+							</div>
+						</div>
+					</div>
+					<h5 class="user-name mb-0">Nadia</h5>
+					<p class="designattion mb-0">Resepsionist</p>
 					<li><a class="dropdown-item" href="{{ url('user-profile') }}"><i
 								class="bx bx-user"></i><span>Profile</span></a>
 					</li>
-					<li><a class="dropdown-item" href="{{ url('orders') }}"><i class="bx bx-cog"></i><span>Orders</span></a>
-					</li>
 					<li><a class="dropdown-item" href="{{ url('index') }}"><i
 								class='bx bx-home-circle'></i><span>Dashboard</span></a>
-					</li>
-					<li><a class="dropdown-item" href="{{ url('earnings') }}"><i
-								class='bx bx-dollar-circle'></i><span>Earnings</span></a>
-					</li>
-					<li><a class="dropdown-item" href="{{ url('downloads') }}"><i
-								class='bx bx-download'></i><span>Downloads</span></a>
-					</li>
-					<li>
-						<div class="dropdown-divider mb-0"></div>
 					</li>
 					<li><a class="dropdown-item" href="{{ url('authentication-signin') }}"><i
 								class='bx bx-log-out-circle'></i><span>Logout</span></a>

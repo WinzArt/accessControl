@@ -11,7 +11,7 @@
 
 		<div class="dash-wrapper">
 			<div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 row-cols-xxl-5">
-				<div class="col col-md-3 border-end border-light-2 pt-5">
+				<div class="col col-md-3 border-end border-light-2 ">
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
 							<p class="mb-1 text-white">Visitors</p>
@@ -27,12 +27,12 @@
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
 							<h4 class="mb-3 text-white">WELLCOME TO</h4>
-							<img src="assets/images/LOGO.png" alt="" class="w-75">
+							<img src="assets/images/LOGO.png" alt="" class="w-100">
 						</div>
 					</div>
 				</div>
 
-				<div class="col col-md-3 border-start border-light-2 pt-5">
+				<div class="col col-md-3 border-start border-light-2 ">
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
 							<p class="mb-1 text-white">Devices</p>
@@ -82,7 +82,7 @@
 		</div>
 
 		<div class="row row-cols-1 row-cols-xl-2">
-			<div class="col d-flex">
+			<div class="col d-flex pb-2">
 				<div class="card radius-10 w-100 h-100">
 					<div class="card-body">
 						<div class="d-flex align-items-center">
@@ -151,7 +151,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col d-flex">
+			<div class="col d-flex pb-2">
 				<div class="card radius-10 w-100 h-100">
 					<div class="card-body">
 						<div class="d-flex align-items-center">
