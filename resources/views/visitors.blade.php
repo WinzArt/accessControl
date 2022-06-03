@@ -25,7 +25,7 @@
 		<hr />
 		<div class="card">
 			<div class="card-body">
-				<div class="table-responsive container-fluid">
+				<div class="table-responsive container-fluid p-1">
 					<table id="example2" class="table table-striped display nowrap">
 						<thead>
 							<tr>
@@ -323,11 +323,11 @@
 		var table = $('#example2').DataTable({
 			"lengthChange": false,
 			"autoWidth": false,
-			"paging": true,
+			"paging": false,
 			"info": false,
-			"scrollY": "50.9vh",
+			"scrollY": "50vh",
 			"scrollX": true,
-			buttons: ['excel', 'pdf', 'print']
+			"buttons": ['excel', 'pdf', 'print']
 		});
 
 		table.buttons().container()

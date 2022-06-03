@@ -9,7 +9,7 @@
 <div class="page-wrapper">
 	<div class="page-content">
 
-		<div class="dash-wrapper bg-dark">
+		<div class="dash-wrapper">
 			<div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 row-cols-xxl-5">
 				<div class="col col-md-3 border-end border-light-2 pt-5">
 					<div class="card bg-transparent shadow-none mb-0">

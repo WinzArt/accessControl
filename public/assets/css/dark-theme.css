@@ -6,6 +6,10 @@ html.dark-theme .switcher-wrapper {
 html.dark-theme body {
     color: #e4e5e6;
     background-color: #495057;
+    background-image: url(../images/wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 html.dark-theme .h1,
 html.dark-theme .h2,
@@ -22,7 +26,8 @@ html.dark-theme h6 {
     color: #e4e5e6;
 }
 html.dark-theme .card {
-    background-color: #343a40;
+    /* background-color: #343a4080; */
+    background-color: rgb(52 58 64 / 0.6);
     box-shadow: 0 0.1rem 0.7rem rgb(0 0 0 / 32%);
 }
 html.dark-theme .card-header {
@@ -525,7 +530,8 @@ html.dark-theme .btn-outline-dark {
     color: #ffffff;
     border-color: #181e22;
 }
-html.dark-theme .page-link {
+html.dark-theme .page-link,
+.page-item.active .page-link {
     color: #b2b6ba;
     background-color: #495057;
     border: 1px solid rgb(255 255 255 / 0.12);

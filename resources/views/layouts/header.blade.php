@@ -6,16 +6,15 @@
 					<img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
 				</div>
 				<div class="">
-					<h4 class="logo-text">winzArt</h4>
+					<h4 class="logo-text">eDRo</h4>
 				</div>
 			</div>
 			<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
 			<div class="top-menu-left d-none d-lg-block ps-3">
-				<nav class="topbar-nav">
-					<ul class="navbar-nav">
+				<nav class="">
+					<ul class="navbar-nav nav-pills">
 						<li class="nav-item">
-							<a class="nav-link {{ Request::is('index') ? 'active' : '' }} active"
-								href="{{ url('index') }}">Dashboard</a>
+							<a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Dashboard</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('visitors') ? 'active' : '' }}" href="{{ url('visitors') }}">Users</a>
@@ -26,19 +25,19 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="search-bar flex-grow-1">
+			{{-- <div class="search-bar flex-grow-1">
 				<div class="position-relative search-bar-box">
 					<input type="text" class="form-control search-control" placeholder="Type to search..."> <span
 						class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
 					<span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
 				</div>
-			</div>
+			</div> --}}
 			<div class="top-menu ms-auto">
 				<ul class="navbar-nav align-items-center">
-					<li class="nav-item mobile-search-icon">
+					{{-- <li class="nav-item mobile-search-icon">
 						<a class="nav-link" href="#"> <i class='bx bx-search'></i>
 						</a>
-					</li>
+					</li> --}}
 					<li class="nav-item dropdown dropdown-large">
 						<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown"
 							aria-expanded="false"> <i class='bx bx-category'></i>

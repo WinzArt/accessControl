@@ -24,7 +24,7 @@
 		<hr />
 		<div class="card">
 			<div class="card-body">
-				<div class="table-responsive container-fluid">
+				<div class="table-responsive container-fluid p-1">
 					<table id="example2" class="table table-striped display nowrap">
 						<thead>
 							<tr>
