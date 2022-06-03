@@ -9,6 +9,7 @@
 					<h4 class="logo-text">eDRo</h4>
 				</div>
 			</div>
+<<<<<<< Updated upstream
 			<div class="mobile-toggle-menu">
 				<i class='bx bx-menu'></i>
 			</div>
@@ -28,7 +29,41 @@
 							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}" href="{{ url('#') }}">History</a>
 						</li>
 					</ul>
+=======
+			<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
+			<div class="top-menu-left d-none d-lg-block ps-3">
+
+				{{-- <ul class="navbar-nav nav-pills">
+					<li class="nav-item">
+						<a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ Request::is('visitors') ? 'active' : '' }}" href="{{ url('visitors') }}">Users</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}" href="{{ url('devices') }}">Devices</a>
+					</li>
+				</ul> --}}
+
+				<nav class="">
+					<div class="container-fluid">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+							<ul class="nav-pills navbar-nav me-auto mb-2 mb-lg-0 ">
+								<li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
+											class='bx bxs-home me-1'></i>Home</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="#"><i class='bx bxs-user me-1'></i>About</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="#"><i class='bx bx-category-alt me-1'></i>Features</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="#"><i class='bx bxs-microphone me-1'></i>Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+>>>>>>> Stashed changes
 				</nav>
+
 			</div>
 			<div class="top-menu ms-auto">
 				<ul class="navbar-nav align-items-center">
