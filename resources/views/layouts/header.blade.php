@@ -10,14 +10,8 @@
 				</div>
 			</div>
 			<div class="mobile-toggle-menu">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<!-- <i class='bx bx-menu' ></i> -->
+				<i class='bx bx-menu'></i>
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 			<div class="top-menu-left d-none d-lg-block ps-3">
 				<nav class="">
 					<ul class="navbar-nav nav-pills">
@@ -360,8 +354,7 @@
 					<li><a class="dropdown-item" href="{{ url('user-profile') }}"><i
 								class="bx bx-user"></i><span>Profile</span></a>
 					</li>
-					<li><a class="dropdown-item" href="{{ url('orders') }}"><i
-								class="bx bx-cog"></i><span>Orders</span></a>
+					<li><a class="dropdown-item" href="{{ url('orders') }}"><i class="bx bx-cog"></i><span>Orders</span></a>
 					</li>
 					<li><a class="dropdown-item" href="{{ url('index') }}"><i
 								class='bx bx-home-circle'></i><span>Dashboard</span></a>
