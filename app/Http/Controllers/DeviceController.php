@@ -17,7 +17,7 @@ class DeviceController extends Controller
         $dataDevice = Device::all();
 
         return view('devices', [
-            'data' => $dataDevice,
+            'dataDevice' => $dataDevice,
             'title' => 'Visitors List'
         ]);
     }

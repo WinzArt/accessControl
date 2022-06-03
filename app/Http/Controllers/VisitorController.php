@@ -17,7 +17,7 @@ class VisitorController extends Controller
         $dataVisitor = Visitor::all();
 
         return view('visitors', [
-            'data' => $dataVisitor,
+            'dataVisitor' => $dataVisitor,
             'title' => 'Visitors List'
         ]);
     }
