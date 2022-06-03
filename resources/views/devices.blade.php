@@ -28,9 +28,9 @@
 					<table id="example2" class="table table-striped display nowrap">
 						<thead>
 							<tr>
-								<th scope="col">Id</th>
+								<th scope="col">No</th>
 								<th scope="col">Device Type</th>
-								<th scope="col">Access</th>
+								<th scope="col">Device Name</th>
 								<th scope="col">Last Updated</th>
 								<th scope="col">Actions</th>
 							</tr>

@@ -9,7 +9,15 @@
 					<h4 class="logo-text">eDRo</h4>
 				</div>
 			</div>
-			<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
+			<div class="mobile-toggle-menu">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- <i class='bx bx-menu' ></i> -->
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 			<div class="top-menu-left d-none d-lg-block ps-3">
 				<nav class="">
 					<ul class="navbar-nav nav-pills">
@@ -47,32 +55,22 @@
 								<div class="col text-center">
 									<div class="app-box mx-auto bg-gradient-cosmic text-white"><i class='bx bx-group'></i>
 									</div>
-									<div class="app-title">Teams</div>
+									<div class="app-title">Dashboard</div>
 								</div>
 								<div class="col text-center">
 									<div class="app-box mx-auto bg-gradient-burning text-white"><i class='bx bx-atom'></i>
 									</div>
-									<div class="app-title">Projects</div>
+									<div class="app-title">Users</div>
 								</div>
 								<div class="col text-center">
 									<div class="app-box mx-auto bg-gradient-lush text-white"><i class='bx bx-shield'></i>
 									</div>
-									<div class="app-title">Tasks</div>
+									<div class="app-title">Devices</div>
 								</div>
 								<div class="col text-center">
-									<div class="app-box mx-auto bg-gradient-kyoto text-dark"><i class='bx bx-notification'></i>
+									<div class="app-box mx-auto bg-gradient-lush text-white"><i class='bx bx-shield'></i>
 									</div>
-									<div class="app-title">Feeds</div>
-								</div>
-								<div class="col text-center">
-									<div class="app-box mx-auto bg-gradient-blues text-dark"><i class='bx bx-file'></i>
-									</div>
-									<div class="app-title">Files</div>
-								</div>
-								<div class="col text-center">
-									<div class="app-box mx-auto bg-gradient-moonlit text-white"><i class='bx bx-filter-alt'></i>
-									</div>
-									<div class="app-title">Alerts</div>
+									<div class="app-title">Logs</div>
 								</div>
 							</div>
 						</div>

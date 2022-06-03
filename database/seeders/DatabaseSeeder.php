@@ -19,90 +19,109 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+        // Seed Data Access User
+
         Visitor::create([
-            'name' => 'Eko Marsudiono',
+            'name' => 'Administrator',
             'gender' => 'Male',
             'phone' => '082213134918',
-            'email' => 'eko.mars@gmail.com',
+            'email' => 'admin@email.com',
             'photo' => '',
         ]);
 
         Visitor::create([
-            'name' => 'Ervinda Rizky Safitri',
+            'name' => 'User A',
+            'gender' => 'Male',
+            'phone' => '082213134918',
+            'email' => 'user.a@email.com',
+            'photo' => '',
+        ]);
+
+        Visitor::create([
+            'name' => 'User B',
             'gender' => 'Female',
             'phone' => '082213134918',
-            'email' => 'vinda.rs@gmail.com',
+            'email' => 'user.b@email.com',
             'photo' => '',
         ]);
 
         Visitor::create([
-            'name' => 'Ayu Rahayu',
+            'name' => 'User C',
             'gender' => 'Female',
             'phone' => '082213134918',
-            'email' => 'ayu@gmail.com',
+            'email' => 'user.c@email.com',
             'photo' => '',
         ]);
 
         Visitor::create([
-            'name' => 'Edi Winarno',
+            'name' => 'User D',
             'gender' => 'Male',
             'phone' => '082213134918',
-            'email' => 'edie.winz@gmail.com',
+            'email' => 'user.d@email.com',
             'photo' => '',
         ]);
 
-        Visitor::create([
-            'name' => 'Winz.Art_',
-            'gender' => 'Male',
-            'phone' => '082213134918',
-            'email' => 'winz.art@gmail.com',
-            'photo' => '',
+        // Seed Data Devices
+
+        Device::create([
+            'name' => 'Pendaftaran Ruang Admin',
+            'device' => 'Enrollment',
         ]);
 
         Device::create([
-            'name' => 'Admin',
-            'device' => 'Reader',
+            'name' => 'Intelligent Controller',
+            'device' => 'IntelligentController',
         ]);
 
         Device::create([
-            'name' => 'Door_1',
-            'device' => 'Reader',
-        ]);
-
-        Device::create([
-            'name' => 'Door_2',
+            'name' => 'Pintu A',
             'device' => 'Reader',
         ]);
 
         Device::create([
-            'name' => 'Door_3',
-            'device' => 'Reader',
-        ]);
-        Device::create([
-            'name' => 'Door_4',
+            'name' => 'Pintu B',
             'device' => 'Reader',
         ]);
 
         Device::create([
-            'name' => 'Door_5',
+            'name' => 'Pintu C',
             'device' => 'Reader',
         ]);
+        Device::create([
+            'name' => 'Pintu D',
+            'device' => 'Reader',
+        ]);
+
+        Device::create([
+            'name' => 'Pintu E',
+            'device' => 'Reader',
+        ]);
+
+        // Seed Relasi Data Access User dengan Devices
 
         Relation::create([
             'device_id' => '1',
             'visitor_id' => '1',
         ]);
         Relation::create([
-            'device_id' => '2',
+            'device_id' => '1',
             'visitor_id' => '2',
-        ]);
-        Relation::create([
-            'device_id' => '3',
-            'visitor_id' => '3',
         ]);
         Relation::create([
             'device_id' => '1',
             'visitor_id' => '4',
+        ]);
+        Relation::create([
+            'device_id' => '1',
+            'visitor_id' => '5',
+        ]);
+        Relation::create([
+            'device_id' => '2',
+            'visitor_id' => '2',
+        ]);
+        Relation::create([
+            'device_id' => '2',
+            'visitor_id' => '3',
         ]);
         Relation::create([
             'device_id' => '2',
@@ -113,20 +132,13 @@ class DatabaseSeeder extends Seeder
             'visitor_id' => '1',
         ]);
         Relation::create([
-            'device_id' => '1',
-            'visitor_id' => '2',
-        ]);
-        Relation::create([
-            'device_id' => '2',
+            'device_id' => '3',
             'visitor_id' => '3',
         ]);
         Relation::create([
             'device_id' => '3',
             'visitor_id' => '4',
         ]);
-        Relation::create([
-            'device_id' => '1',
-            'visitor_id' => '5',
-        ]);
+
     }
 }

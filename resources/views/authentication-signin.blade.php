@@ -20,7 +20,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="assets/css/icons.css" rel="stylesheet">
-	<title>Synadmin – Bootstrap5 Admin Template</title>
+	<title>Sign In - Access System</title>
 </head>
 
 <body>
@@ -48,8 +48,10 @@
 												<img class="me-2" src="assets/images/icons/search.svg" width="16" alt="Image Description">
 												<span>Sign in with Google</span>
 											</span>
-										</a> <a href="javascript:;" class="btn btn-facebook"><i class="bx bxl-facebook"></i>Sign in with
-											Facebook</a>
+										</a>
+										<!-- <a href="javascript:;" class="btn btn-facebook">
+											<i class="bx bxl-facebook"></i>Sign in with Facebook
+										</a> -->
 									</div>
 									<div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
 										<hr />
@@ -64,7 +66,7 @@
 												<label for="inputChoosePassword" class="form-label">Enter Password</label>
 												<div class="input-group" id="show_hide_password">
 													<input type="password" class="form-control border-end-0" id="inputChoosePassword"
-														value="12345678" placeholder="Enter Password"> <a href="javascript:;"
+														placeholder="Enter Password"> <a href="javascript:;"
 														class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
