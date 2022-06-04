@@ -68,36 +68,36 @@ a {
 }
 
 .invalid-feedback {
-    color: #fd3550;
+    color: #fd3550 !important;
 }
 
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
-    border-color: #fd3550;
+    border-color: #fd3550 !important;
 }
 .form-control.is-invalid:focus,
 .was-validated .form-control:invalid:focus {
-    border-color: #fd3550;
+    border-color: #fd3550 !important;
 }
 .form-select.is-invalid,
 .was-validated .form-select:invalid {
-    border-color: #fd3550;
+    border-color: #fd3550 !important;
 }
 .form-select.is-invalid:focus,
 .was-validated .form-select:invalid:focus {
-    border-color: #fd3550;
+    border-color: #fd3550 !important;
 }
 .form-check-input.is-invalid,
 .was-validated .form-check-input:invalid {
-    border-color: #fd3550;
+    border-color: #fd3550 !important;
 }
 .form-check-input.is-invalid:checked,
 .was-validated .form-check-input:invalid:checked {
-    background-color: #fd3550;
+    background-color: #fd3550 !important;
 }
 .form-check-input.is-invalid ~ .form-check-label,
 .was-validated .form-check-input:invalid ~ .form-check-label {
-    color: #fd3550;
+    color: #fd3550 !important;
 }
 
 .btn {

@@ -3,10 +3,10 @@
 		<nav class="navbar navbar-expand">
 			<div class="topbar-logo-header">
 				<div class="">
-					<img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
+					<img src="{{ asset('assets/images/LOGO.png') }}" width="140" alt="logo icon">
 				</div>
 				<div class="">
-					<h4 class="logo-text">eDRo</h4>
+					{{-- <h4 class="logo-text">eDRo</h4> --}}
 				</div>
 			</div>
 			<div class="mobile-toggle-menu">
@@ -19,10 +19,12 @@
 							<a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Dashboard</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link {{ Request::is('visitors') ? 'active' : '' }}" href="{{ url('visitors') }}">Users</a>
+							<a class="nav-link {{ Request::is('visitors') ? 'active' : '' }}"
+								href="{{ route('visitors.index') }}">Users</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}" href="{{ url('devices') }}">Devices</a>
+							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}"
+								href="{{ route('devices.index') }}">Devices</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('#') ? 'active' : '' }}" href="{{ url('#') }}">History</a>
@@ -355,14 +357,23 @@
 					</div>
 					<h5 class="user-name mb-0">Nadia</h5>
 					<p class="designattion mb-0">Reseptionist</p>
-					<li><a class="dropdown-item" href="{{ url('user-profile') }}"><i
-								class="bx bx-user"></i><span>Profile</span></a>
+					<li>
+						<a class="dropdown-item" href="{{ url('user-profile') }}">
+							<i class="bx bx-user"></i>
+							<span>Edit Profile</span>
+						</a>
 					</li>
-					<li><a class="dropdown-item" href="{{ url('index') }}"><i
-								class='bx bx-home-circle'></i><span>Dashboard</span></a>
+					<li>
+						<a class="dropdown-item" href="{{ url('/') }}">
+							<i class='bx bx-home-circle'></i>
+							<span>Dashboard</span>
+						</a>
 					</li>
-					<li><a class="dropdown-item" href="{{ url('authentication-signin-with-header-footer') }}"><i
-								class='bx bx-log-out-circle'></i><span>Logout</span></a>
+					<li>
+						<a class="dropdown-item" href="{{ url('authentication-signin-with-header-footer') }}">
+							<i class='bx bx-log-out-circle'></i>
+							<span>Logout</span>
+						</a>
 					</li>
 				</ul>
 			</div>

@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\UserLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,24 @@ use App\Http\Controllers\VisitorController;
 |
 */
 
+Route::resource('users', UserController::class);
+// Route::resource('logins', LoginController::class);
+Route::get('/userlogin', function () {
+    return view('userLogin');
+});
+Route::post('/userlogin', function () {
+    return view('userLogin');
+});
+
+Route::get('/login', UserLoginController::class, 'login')->name('login');
+
+Route::get('/', function () {
+    return view('index');
+});
+
 Route::resource('visitors', VisitorController::class);
 
 Route::resource('devices', DeviceController::class);
-
 
 
 // ///////////////////////////////////////////////////////

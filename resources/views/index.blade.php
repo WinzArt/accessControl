@@ -14,8 +14,8 @@
 				<div class="col col-md-3 border-end border-light-2 ">
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
-							<p class="mb-1 text-white">Visitors</p>
-							<h3 class="mb-3 text-white">876</h3>
+							<p class="mb-1 text-white">Users</p>
+							<h3 class="mb-3 text-white">{{ $visitorsCount }}</h3>
 							<p class="font-13 text-white"><span class="text-success"><i class="lni lni-arrow-up"></i>2.1%</span> vs
 								last 7 days</p>
 							<div id="chart4"></div>
@@ -27,7 +27,7 @@
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
 							<h4 class="mb-3 text-white">WELLCOME TO</h4>
-							<img src="assets/images/LOGO.png" alt="" class="w-100">
+							<img src="assets/images/LOGO2.png" alt="" class="w-100">
 						</div>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
 							<p class="mb-1 text-white">Devices</p>
-							<h3 class="mb-3 text-white">4.5M</h3>
+							<h3 class="mb-3 text-white">{{ $deviceCount }}</h3>
 							<p class="font-13 text-white"><span class="text-success"><i class="lni lni-arrow-up"></i> 4.2% </span>
 								last 7 days</p>
 							<div id="chart2"></div>
