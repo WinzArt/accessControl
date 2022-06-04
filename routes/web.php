@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DeviceController;
-use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\RelationController;
+use App\Http\Controllers\UserLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,24 +18,28 @@ use App\Http\Controllers\VisitorController;
 |
 */
 
-Route::resource('users', UserController::class);
-Route::get('userlogin', [UserLoginController::class, 'index']);
+Route::resource('users', UserController::class)->middleware('guest');
+
+Route::get('userlogin', [UserLoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('userlogin', [UserLoginController::class, 'authenticate']);
+Route::post('userlogout', [UserLoginController::class, 'logout']);
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// })->middleware('auth');
 
-Route::resource('visitors', VisitorController::class);
+Route::resource('/', RelationController::class)->middleware('auth');
 
-Route::resource('devices', DeviceController::class);
+Route::resource('visitors', VisitorController::class)->middleware('auth');
+
+Route::resource('devices', DeviceController::class)->middleware('auth');
 
 
 // ///////////////////////////////////////////////////////
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 Route::get('/index', function () {
     return view('index');
 });

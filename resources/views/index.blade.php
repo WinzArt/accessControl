@@ -26,7 +26,7 @@
 				<div class="col col-md-6">
 					<div class="card bg-transparent shadow-none mb-0">
 						<div class="card-body text-center">
-							<h4 class="mb-3 text-white">WELLCOME TO</h4>
+							<h4 class="mb-3 text-white">Wellcome back, {{ auth()->user()->username }}</h4>
 							<img src="assets/images/LOGO2.png" alt="" class="w-100">
 						</div>
 					</div>

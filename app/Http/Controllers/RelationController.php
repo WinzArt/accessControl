@@ -14,7 +14,12 @@ class RelationController extends Controller
      */
     public function index()
     {
-        //
+        $data = Relation::all();
+
+        return view('index', [
+            'data' => $data,
+            'title' => 'Dashboard'
+        ]);
     }
 
     /**

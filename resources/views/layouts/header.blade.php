@@ -340,8 +340,8 @@
 					data-bs-toggle="dropdown" aria-expanded="false">
 					<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
 					<div class="user-info ps-3">
-						<p class="user-name mb-0">Nadia</p>
-						<p class="designattion mb-0">Reseptionist</p>
+						<p class="user-name mb-0">{{ auth()->user()->name }}</p>
+						<p class="designattion mb-0">{{ auth()->user()->division }}</p>
 					</div>
 				</a>
 				<ul class="dropdown-menu dropdown-menu-end text-center">
@@ -349,14 +349,14 @@
 						<div class="card">
 							<img src="assets/images/gallery/01.png" class="card-img-top" alt="...">
 							<div class="card-body" style="position: absolute;top:2rem;left:0;right:0;">
-								<h6 class="designattion mb-4">Operator</h6>
+								<h6 class="designattion mb-4">{{ auth()->user()->role }}</h6>
 								<img src="assets/images/avatars/avatar-2.png" class="rounded-circle shadow-lg" alt="user avatar"
 									style="background-color: #495057; padding: 4px" width="150px">
 							</div>
 						</div>
 					</div>
-					<h5 class="user-name mb-0">Nadia</h5>
-					<p class="designattion mb-0">Reseptionist</p>
+					<h5 class="user-name mb-0">{{ auth()->user()->name }}</h5>
+					<p class="designattion mb-0">{{ auth()->user()->division }}</p>
 					<li>
 						<a class="dropdown-item" href="{{ url('user-profile') }}">
 							<i class="bx bx-user"></i>
@@ -370,10 +370,18 @@
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{ url('authentication-signin-with-header-footer') }}">
+						<form action="{{ url('/userlogout') }}" method="POST">
+							@csrf
+							<button type="submit" class="dropdown-item">
+								<i class='bx bx-log-out-circle'></i>
+								<span>Logout</span>
+							</button>
+						</form>
+
+						{{-- <a class="dropdown-item" href="{{ url('/userlogin') }}">
 							<i class='bx bx-log-out-circle'></i>
 							<span>Logout</span>
-						</a>
+						</a> --}}
 					</li>
 				</ul>
 			</div>
