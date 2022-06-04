@@ -7,17 +7,27 @@ use Illuminate\Support\Facades\Auth;
 
 class UserLoginController extends Controller
 {
-    public function login()
+    public function index()
     {
         return view('userLogin', [
             'title' => 'Login',
         ]);
     }
 
+
     public function authenticate(Request $request)
     {
-        $request->validate([
-            'emai' => ['required']
+        $credentials = $validate = $request->validate([
+            'email' => ['required', 'email:dns'],
+            'password' => ['required', 'min:5', 'max:255']
         ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/');
+        };
+
+        return back()->with('loginError', 'Login Failed!');
     }
 }

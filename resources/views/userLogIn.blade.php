@@ -35,8 +35,8 @@
 									@csrf
 									<div class="col-12">
 										<label for="email" class="form-label">Email Address</label>
-										<input type="email" class="form-control" id="email" placeholder="Email Address" name="email"
-											@error('email') is-invalid @enderror autofocus required>
+										<input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
+											placeholder="Email Address" name="email" value="{{ old('email') }}" autofocus required>
 										@error('email')
 										<div class="invalid-feedback">
 											{{ $message }}
@@ -46,7 +46,7 @@
 									<div class="col-12">
 										<label for="password" class="form-label">Enter Password</label>
 										<div class="input-group" id="show_hide_password">
-											<input type="password" class="form-control border-end-0" id="password" value="12345678"
+											<input type="password" class="form-control border-end-0" id="password"
 												placeholder="Enter Password" name="password" required>
 											<a href="javascript:;" class="input-group-text bg-transparent text-info"><i
 													class='bx bx-hide'></i></a>

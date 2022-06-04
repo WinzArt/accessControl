@@ -99,6 +99,18 @@
           text: 'Please Login...!',
         })
       @endif
+
+      @if ($message = Session::get('loginError'))
+      Swal.fire({
+      width: '20rem',
+      background: '#343a40',
+      showConfirmButton: false,
+      timer: 2000,
+      icon: 'error',
+      title: 'Login Failed',
+      text: 'Please Login...!',
+      })
+      @endif
 		});
   </script>
   <!--app JS-->

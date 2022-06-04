@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DeviceController;
-use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\UserLoginController;
+use App\Http\Controllers\VisitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +18,8 @@ use App\Http\Controllers\UserLoginController;
 */
 
 Route::resource('users', UserController::class);
-// Route::resource('logins', LoginController::class);
-Route::get('/userlogin', function () {
-    return view('userLogin');
-});
-Route::post('/userlogin', function () {
-    return view('userLogin');
-});
-
-Route::get('/login', UserLoginController::class, 'login')->name('login');
+Route::get('userlogin', [UserLoginController::class, 'index']);
+Route::post('userlogin', [UserLoginController::class, 'authenticate']);
 
 Route::get('/', function () {
     return view('index');
