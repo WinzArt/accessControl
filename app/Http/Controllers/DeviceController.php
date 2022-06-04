@@ -14,10 +14,7 @@ class DeviceController extends Controller
      */
     public function index()
     {
-        $dataDevice = Device::all();
-
         return view('devices', [
-            'dataDevice' => $dataDevice,
             'title' => 'Visitors List'
         ]);
     }

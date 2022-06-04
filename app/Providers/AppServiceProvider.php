@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use Carbon\Carbon;
+use App\Models\User;
 use App\Models\Device;
 use App\Models\Visitor;
-use Carbon\Carbon;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Gate::define('admin', function (User $user) {
+            return $user->role !== 'User';
+        });
+
+
         view()->composer('*', function (View $view) {
 
             $deviceCount = Device::count();

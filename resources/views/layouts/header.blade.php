@@ -22,6 +22,9 @@
 							<a class="nav-link {{ Request::is('visitors') ? 'active' : '' }}"
 								href="{{ route('visitors.index') }}">Users</a>
 						</li>
+
+						@can('admin')
+
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}"
 								href="{{ route('devices.index') }}">Devices</a>
@@ -29,11 +32,14 @@
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('#') ? 'active' : '' }}" href="{{ url('#') }}">History</a>
 						</li>
+
+						@endcan
+
 					</ul>
 				</nav>
 			</div>
 			<div class="top-menu ms-auto">
-				<ul class="navbar-nav align-items-center">
+				{{-- <ul class="navbar-nav align-items-center">
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown"
 							aria-expanded="false"> <i class='bx bx-category'></i>
@@ -333,7 +339,7 @@
 							</a>
 						</div>
 					</li>
-				</ul>
+				</ul> --}}
 			</div>
 			<div class="user-box dropdown dropdown-large border-light-2">
 				<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button"
