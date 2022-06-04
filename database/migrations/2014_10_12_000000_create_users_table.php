@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
 			$table->bigInteger('phone');
 			$table->timestamp('email_verified_at')->nullable();
 			$table->string('password');
-			$table->enum('division', ['Reseptionist', 'IT Support', 'Technician', 'Sales']);
+			$table->enum('division', ['Receptionist', 'IT Support', 'Technician', 'Sales']);
 			$table->enum('role', ['User', 'Admin', 'Super Admin']);
 			$table->string('photo')->nullable();
 			$table->rememberToken();

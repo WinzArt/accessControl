@@ -46,10 +46,15 @@
 									<div class="col-12">
 										<label for="password" class="form-label">Enter Password</label>
 										<div class="input-group" id="show_hide_password">
-											<input type="password" class="form-control border-end-0" id="password"
-												placeholder="Enter Password" name="password" required>
+											<input type="password" class="form-control border-end-0 @error('password') is-invalid @enderror"
+												id="password" placeholder="Enter Password" name="password" required>
 											<a href="javascript:;" class="input-group-text bg-transparent text-info"><i
 													class='bx bx-hide'></i></a>
+											@error('password')
+											<div class="invalid-feedback">
+												{{ $message }}
+											</div>
+											@enderror
 										</div>
 									</div>
 									<div class="col-md-6">

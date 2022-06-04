@@ -107,7 +107,7 @@
       showConfirmButton: false,
       timer: 2000,
       icon: 'error',
-      title: 'Login Failed',
+      title: 'Login Dulu Cok!!!',
       text: 'Please Login...!',
       })
       @endif

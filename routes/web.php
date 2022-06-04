@@ -24,15 +24,9 @@ Route::get('userlogin', [UserLoginController::class, 'index'])->name('login')->m
 Route::post('userlogin', [UserLoginController::class, 'authenticate']);
 Route::post('userlogout', [UserLoginController::class, 'logout']);
 
-// Route::get('/', function () {
-//     return view('index');
-// })->middleware('auth');
-
 Route::resource('/', RelationController::class)->middleware('auth');
-
 Route::resource('visitors', VisitorController::class)->middleware('auth');
-
-Route::resource('devices', DeviceController::class)->middleware('auth');
+Route::resource('devices', DeviceController::class)->middleware('admin');
 
 
 // ///////////////////////////////////////////////////////

@@ -99,7 +99,30 @@ class UserController extends Controller
 	 */
 	public function update(Request $request, User $user)
 	{
-		//
+		$validate = $request->validate([
+			'name' => ['required', 'max:255'],
+			'username' => ['required', 'min:3', 'max:255', 'unique:users'],
+			'email' => ['required', 'email:dns', 'unique:users'],
+			'password' => ['required', 'min:5', 'max:255'],
+		]);
+		$validate['password'] = bcrypt($validate['password']);
+
+		$dataUser = $request->all();
+		// dd($dataVisitor);
+
+		$user = new User($validate);
+		$user->remember_token = Str::random(60);
+		$user->phone = $dataUser['phone'];
+		$user->division = $dataUser['division'];
+		$user->role = $dataUser['role'];
+		if ($request->hasFile('photo')) {
+			$request->file('photo')->move('usersPhoto/', $request->file('photo')->getClientOriginalName());
+			$user->photo = $request->file('photo')->getClientOriginalName();
+		}
+		$user->save();
+		// dd('success');
+
+		return redirect('/userlogin')->with('success', 'Registration successful');
 	}
 
 	/**
