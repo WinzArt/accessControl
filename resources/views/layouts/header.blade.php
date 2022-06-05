@@ -19,12 +19,8 @@
 							<a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Dashboard</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link {{ Request::is('visitors') ? 'active' : '' }}"
-								href="{{ route('visitors.index') }}">Users</a>
+							<a class="nav-link {{ Request::is('users') ? 'active' : '' }}" href="{{ route('users.index') }}">Users</a>
 						</li>
-
-						@can('admin')
-
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('devices') ? 'active' : '' }}"
 								href="{{ route('devices.index') }}">Devices</a>
@@ -32,9 +28,6 @@
 						<li class="nav-item">
 							<a class="nav-link {{ Request::is('#') ? 'active' : '' }}" href="{{ url('#') }}">History</a>
 						</li>
-
-						@endcan
-
 					</ul>
 				</nav>
 			</div>
@@ -364,7 +357,7 @@
 					<h5 class="user-name mb-0">{{ auth()->user()->name }}</h5>
 					<p class="designattion mb-0">{{ auth()->user()->division }}</p>
 					<li>
-						<a class="dropdown-item" href="{{ url('user-profile') }}">
+						<a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalProfile">
 							<i class="bx bx-user"></i>
 							<span>Edit Profile</span>
 						</a>
@@ -393,4 +386,83 @@
 			</div>
 		</nav>
 	</div>
+
+
+	{{-- <div class="modal fade" id="modalProfile" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="card-title d-flex align-items-center">
+						<div><i class="bx bx-edit me-1 font-60 text-info"></i>
+						</div>
+						<h5 class="mb-0 text-info">Edit Profile</h5>
+						<button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<hr>
+					<form action="{{ route('users.update') }}" method="POST" enctype="multipart/form-data" class="row g-3">
+						@csrf
+						@method('PUT')
+						<div class="col-md-12">
+							<label for="inputPhoneNo" class="form-label">Pitcture</label>
+							<div class="input-group input-group-sm"> <span class="input-group-text bg-transparent"><i
+										class='bx bxs-image-add'></i></span>
+								<input class="form-control" type="file">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label for="inputLastName1" class="form-label">Name</label>
+							<div class="input-group input-group-sm"> <span class="input-group-text bg-transparent"><i
+										class='bx bxs-user'></i></span>
+								<input type="text" class="form-control border-start-0" name="name" value="{{ auth()->user()->name }}" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label for="inputLastName1" class="form-label">Username</label>
+							<div class="input-group input-group-sm"> <span class="input-group-text bg-transparent"><i
+										class='bx bx-user'></i></span>
+								<input type="text" class="form-control border-start-0" name="username"
+									value="{{ auth()->user()->username }}" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label for="inputPhoneNo" class="form-label">Phone No</label>
+							<div class="input-group input-group-sm"> <span class="input-group-text bg-transparent"><i
+										class='bx bxs-phone'></i></span>
+								<input type="text" class="form-control border-start-0" name="phone"
+									value="0{{ auth()->user()->phone }}" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label for="inputEmailAddress" class="form-label">Email Address</label>
+							<div class="input-group input-group-sm"> <span class="input-group-text bg-transparent"><i
+										class='bx bxs-envelope'></i></span>
+								<input type="text" class="form-control border-start-0" name="email"
+									value="{{ auth()->user()->email }}" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label class="form-label">Gender</label>
+							<select class="single-select" name="gender">
+								<option selected>{{ $user->gender }}</option>
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+							</select>
+						</div>
+						<div class="col-md-12">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="gridCheck2">
+								<label class="form-check-label" for="gridCheck2">Check me out</label>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<hr>
+							<button type="submit" class="btn btn-outline-info px-5">Update</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> --}}
+
 </header>

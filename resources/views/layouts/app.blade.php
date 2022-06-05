@@ -148,4 +148,18 @@ function checkTime(i) {
 }
 </script>
 
+<script>
+	@if ($message = Session::get('abort'))
+	Swal.fire({
+	width: '20rem',
+	background: '#343a40',
+	showConfirmButton: false,
+	timer: 2000,
+	icon: 'error',
+	title: 'Login Dulu Cok!!!',
+	text: 'Please Login...!',
+	})
+	@endif
+</script>
+
 </html>

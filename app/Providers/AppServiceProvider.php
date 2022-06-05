@@ -40,6 +40,7 @@ class AppServiceProvider extends ServiceProvider
             $visitorsCount = Visitor::count();
 
             $view
+                ->with('dataUser', User::all())
                 ->with('dataDevice', Device::all())
                 ->with('deviceCount', Device::count())
                 ->with('dataVisitor', Visitor::all())

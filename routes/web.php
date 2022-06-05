@@ -26,7 +26,7 @@ Route::post('userlogout', [UserLoginController::class, 'logout']);
 
 Route::resource('/', RelationController::class)->middleware('auth');
 Route::resource('visitors', VisitorController::class)->middleware('auth');
-Route::resource('devices', DeviceController::class)->middleware('admin');
+Route::resource('devices', DeviceController::class)->middleware('auth');
 
 
 // ///////////////////////////////////////////////////////

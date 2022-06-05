@@ -18,8 +18,12 @@
 	<div class="page-content">
 		<div class="d-none d-sm-flex align-items-center">
 			<h4 class="mb-0 text-uppercase">Devices List</h4>
+
+			@can('admin')
 			<a type="button" class="btn btn-outline-info ms-auto btn-sm" data-bs-toggle="modal"
 				data-bs-target="#modalRegis"><i class='bx bx-plus'></i>Add New Devices</a>
+			@endcan
+
 		</div>
 		<hr />
 		<div class="card">
@@ -32,7 +36,11 @@
 								<th scope="col">Device Type</th>
 								<th scope="col">Device Name</th>
 								<th scope="col">Last Updated</th>
+
+								@can('admin')
 								<th scope="col">Actions</th>
+								@endcan
+
 							</tr>
 						</thead>
 						<tbody style="font-size: 16px; vertical-align: baseline;">
@@ -47,6 +55,8 @@
 								<td>{{ $device->device }}</td>
 								<td>{{ $device->name }}</td>
 								<td>{{ $device->updated_at->format('d/m/Y, H:i') }}</td>
+
+								@can('admin')
 								<td>
 									<a class="btn badge btn-outline-warning edit" type="button" data-bs-toggle="modal"
 										data-bs-target="#modalEdit-{{ $device->id }}"><i class="bx bx-edit bx-xs"></i></a>
@@ -57,6 +67,8 @@
 											data-nama="{{ $device->name }}"><i class="bx bx-trash bx-xs text-center"></i></a>
 									</form>
 								</td>
+								@endcan
+
 							</tr>
 							@endforeach
 						</tbody>
